@@ -136,7 +136,7 @@ end
 
 class Array #:nodoc:
   # compares two arrays to determine if they both contain the same elements
-  def same?(y)
-    self.sort == y.sort
+  def same?(second)
+    self.inject(true){|x,y| x && second.include?(y)} && second.inject(true){|x,y| x && self.include?(y)}
   end
 end
