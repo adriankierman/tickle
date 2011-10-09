@@ -65,6 +65,9 @@ class Date #:nodoc:
             raise Exception, "type \"#{attr}\" not supported."
     end
   end
+  %w(to_date to_datetime).each do |method|
+    public method if private_instance_methods.include?(method)
+  end
 end
 
 class Time #:nodoc:
@@ -93,6 +96,10 @@ class Time #:nodoc:
     else
       raise Exception, "type \"#{attr}\" not supported."
     end
+  end
+
+  %w(to_date to_datetime).each do |method|
+    public method if private_instance_methods.include?(method)
   end
 end
 

@@ -108,6 +108,7 @@ class Tickle::Repeater < Chronic::Tag #:nodoc:
     scanner = {/^other$/ => :other,
       /^begin(ing|ning)?$/ => :beginning,
       /^start$/ => :beginning,
+      /^at$/ => :beginning,
       /^end$/ => :end,
     /^mid(d)?le$/ => :middle}
     scanner.keys.each do |scanner_item|

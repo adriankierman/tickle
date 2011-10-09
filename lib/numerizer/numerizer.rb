@@ -13,6 +13,8 @@ class Numerizer
                   ['eighteen', '18'],
                   ['nineteen', '19'],
                   ['ninteen', '19'], # Common mis-spelling
+                  ['noon', '12'],
+                  ['midnight', '0'],
                   ['zero', '0'],
                   ['one', '1'],
                   ['two', '2'],
